@@ -27,11 +27,11 @@ let phrases = [
 
 const apiKey = "80771678e5b78ecacbb79ab8151ac360";
 
-let latitude, longitude;
-navigator.geolocation.getCurrentPosition(function(position) {
-  latitude = position.coords.latitude;
-  longitude = position.coords.longitude;
-});
+async function openWeatherCall(url) {
+  let response = await fetch(url);
+  let data = await response.json();
+  return data;
+}
 
 window.onload = () => {
   let r = Math.floor(Math.random() * 5) + 0;
@@ -42,14 +42,12 @@ window.onload = () => {
     "&units=metric" +
     "&appid=" +
     apiKey;
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("temp").innerHTML =
-        data.main.temp.toFixed(0) + " °C";
-      document.getElementById("desc").innerHTML =
-        " - " + data.weather[0].description;
-    });
+  openWeatherCall(url).then(data => {
+    document.getElementById("temp").innerHTML =
+      data.main.temp.toFixed(0) + " °C";
+    document.getElementById("desc").innerHTML =
+      " - " + data.weather[0].description;
+  });
 
   let clock = document.getElementById("clockSpan");
   setInterval(() => {
