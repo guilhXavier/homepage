@@ -21,6 +21,7 @@ h1 {
   font-family: "Courier New", Courier, monospace;
   font-size: 4rem;
 }
+
 .weatherContainer {
   border: solid black 2px;
   width: 40%;
@@ -56,7 +57,22 @@ h1 {
 }
 .bookmarkInner {
   height: 80%;
+  overflow-y: scroll;
   vertical-align: top;
+}
+.bookmarkInner::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #272727;
+  border-radius: 10px;
+  background-color: #272727;
+}
+.bookmarkInner::-webkit-scrollbar {
+  width: 12px;
+  background-color: #272727;
+}
+.bookmarkInner::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #0a0909;
 }
 .bookmarkTitle {
   font-size: 1.4rem;
