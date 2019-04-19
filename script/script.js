@@ -38,10 +38,7 @@ window.onload = () => {
   document.querySelector("h1").innerHTML = phrases[r];
 
   let url =
-    "https://api.openweathermap.org/data/2.5/weather?lat=" +
-    latitude +
-    "&lon=" +
-    longitude +
+    "https://api.openweathermap.org/data/2.5/weather?q=Esteio, Região Geográfica Imediata de Porto Alegre, Região Metropolitana de Porto Alegre, Região Geográfica Intermediária de Porto Alegre, RS, Região Sul, Brasil" +
     "&units=metric" +
     "&appid=" +
     apiKey;
