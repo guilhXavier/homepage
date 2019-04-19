@@ -14,6 +14,17 @@ function getTime() {
   );
 }
 
+let phrases = [
+  "Good morning, Guilherme!",
+  "Have a good day at IF!",
+  "Don't forget lunch time!",
+  "What's the challenge for today?",
+  "You should probably eat something",
+  "Don't stay up too late!",
+  "Any French homework?",
+  "Do it for her"
+];
+
 const apiKey = "80771678e5b78ecacbb79ab8151ac360";
 
 let latitude, longitude;
@@ -23,6 +34,9 @@ navigator.geolocation.getCurrentPosition(function(position) {
 });
 
 window.onload = () => {
+  let r = Math.floor(Math.random() * 5) + 0;
+  document.querySelector("h1").innerHTML = phrases[r];
+
   let url =
     "https://api.openweathermap.org/data/2.5/weather?lat=" +
     latitude +
@@ -39,33 +53,6 @@ window.onload = () => {
       document.getElementById("desc").innerHTML =
         " - " + data.weather[0].description;
     });
-
-  //   let xhr = new XMLHttpRequest();
-  //   xhr.open(
-  //     "GET",
-  //     "http://api.openweathermap.org/data/2.5/weather?lat=" +
-  //       latitude +
-  //       "&lon=" +
-  //       longitude +
-  //       "&units=metric" +
-  //       "&appid=" +
-  //       apiKey
-  //   );
-  //   xhr.onload = () => {
-  //     if (xhr.readyState === 4) {
-  //       if (xhr.status === 200) {
-  //         let json = JSON.parse(xhr.responseText);
-  //         console.log(json);
-  //         document.getElementById("temp").innerHTML =
-  //           json.main.temp.toFixed(0) + " °C";
-  //         document.getElementById("desc").innerHTML =
-  //           " - " + json.weather[0].description;
-  //       } else {
-  //         console.log("error msg: " + xhr.status);
-  //       }
-  //     }
-  //   };
-  //   xhr.send();
 
   let clock = document.getElementById("clockSpan");
   setInterval(() => {

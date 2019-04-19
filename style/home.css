@@ -9,7 +9,7 @@ body {
 .clockContainer,
 .welcomeContainer {
   width: 100%;
-  height: 150px;
+  height: 100px;
   text-align: center;
 }
 h1 {
@@ -43,11 +43,11 @@ h1 {
 .bookmarkSection {
   padding: 1em;
   background-color: #272727;
-  border: solid 3px black;
+  border: solid 2px black;
   font-family: "Courier New", Courier, monospace;
   font-size: 0.85rem;
-  width: 10%;
-  height: 10em;
+  width: 25%;
+  height: 11em;
   margin: 0em 0.5em;
 }
 .bookmarkInner {
@@ -66,4 +66,8 @@ h1 {
   display: block;
   font-size: 1.1rem;
   margin: 0.5em 0em;
+  transition-duration: 0.4s;
+}
+.bookmark:hover {
+  background-color: #5e0199;
 }
