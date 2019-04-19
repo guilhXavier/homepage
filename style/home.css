@@ -1,0 +1,69 @@
+body {
+  background-color: #5e0199;
+}
+.grid1 {
+  margin-top: 120px;
+  display: grid;
+  grid-gap: 20px;
+}
+.clockContainer,
+.welcomeContainer {
+  width: 100%;
+  height: 150px;
+  text-align: center;
+}
+h1 {
+  color: beige;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 4rem;
+}
+.weatherContainer {
+  border: solid black 2px;
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #272727;
+}
+#temperature {
+  color: beige;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5rem;
+}
+.clock {
+  margin-top: 30px;
+  font-size: 3.8rem;
+}
+.bookmarkContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50%;
+  margin: 20px auto;
+}
+.bookmarkSection {
+  padding: 1em;
+  background-color: #272727;
+  border: solid 3px black;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85rem;
+  width: 10%;
+  height: 10em;
+  margin: 0em 0.5em;
+}
+.bookmarkInner {
+  height: 80%;
+  vertical-align: top;
+}
+.bookmarkTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0em 0em 0.35em 0em;
+}
+.bookmark {
+  text-decoration: none;
+  color: white;
+  display: block;
+  font-size: 1.1rem;
+  margin: 0.5em 0em;
+}
