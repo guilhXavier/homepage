@@ -24,7 +24,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
 
 window.onload = () => {
   let url =
-    "http://api.openweathermap.org/data/2.5/weather?lat=" +
+    "https://api.openweathermap.org/data/2.5/weather?lat=" +
     latitude +
     "&lon=" +
     longitude +
