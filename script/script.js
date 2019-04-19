@@ -22,7 +22,12 @@ let phrases = [
   "You should probably eat something",
   "Don't stay up too late!",
   "Any French homework?",
-  "Do it for her"
+  "Do it for her",
+  "Which book do you want to finish?",
+  "Proletaires de tous les pays, unissez-vous!",
+  "Which language is next?",
+  "Winter is coming.",
+  "Late game é agora."
 ];
 
 const apiKey = "80771678e5b78ecacbb79ab8151ac360";
@@ -33,8 +38,13 @@ async function openWeatherCall(url) {
   return data;
 }
 
+document.querySelector("h1").addEventListener("click", () => {
+  let r = Math.floor(Math.random() * 12) + 0;
+  document.querySelector("h1").innerHTML = phrases[r];
+});
+
 window.onload = () => {
-  let r = Math.floor(Math.random() * 5) + 0;
+  let r = Math.floor(Math.random() * 12) + 0;
   document.querySelector("h1").innerHTML = phrases[r];
 
   let url =
