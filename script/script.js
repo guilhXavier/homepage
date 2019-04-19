@@ -27,7 +27,8 @@ let phrases = [
   "Proletaires de tous les pays, unissez-vous!",
   "Which language is next?",
   "Winter is coming.",
-  "Late game é agora."
+  "Late game é agora.",
+  "The French language has 12 vowel sounds"
 ];
 
 const apiKey = "80771678e5b78ecacbb79ab8151ac360";
@@ -39,12 +40,12 @@ async function openWeatherCall(url) {
 }
 
 document.querySelector("h1").addEventListener("click", () => {
-  let r = Math.floor(Math.random() * 12) + 0;
+  let r = Math.floor(Math.random() * 13) + 0;
   document.querySelector("h1").innerHTML = phrases[r];
 });
 
 window.onload = () => {
-  let r = Math.floor(Math.random() * 12) + 0;
+  let r = Math.floor(Math.random() * 13) + 0;
   document.querySelector("h1").innerHTML = phrases[r];
 
   let url =
