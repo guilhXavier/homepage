@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+
 body {
   background-color: #5e0199;
 }
@@ -5,6 +7,31 @@ body {
   margin-top: 120px;
   display: grid;
   grid-gap: 20px;
+}
+#search {
+  width: 100%;
+  height: 100vh;
+  background-color: #272727;
+  display: none;
+  position: absolute;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#searchField {
+  width: 90%;
+  padding: 0.75em 1em;
+  box-sizing: border-box;
+  background-color: #272727;
+  border: solid 0px #272727;
+  font-family: "Roboto Mono";
+  font-size: 4rem;
+  color: beige;
+  outline: none;
+  border-radius: 3px;
+  margin-bottom: 1em;
+  text-align: center;
 }
 .clockContainer {
   width: 100%;
@@ -18,7 +45,7 @@ body {
 }
 h1 {
   color: beige;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Roboto Mono";
   font-size: 4rem;
 }
 
@@ -31,7 +58,7 @@ h1 {
 }
 #temperature {
   color: beige;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Roboto Mono";
   font-size: 1.5rem;
 }
 .clock {
@@ -49,7 +76,7 @@ h1 {
   padding: 1em;
   background-color: #272727;
   border: solid 2px black;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Roboto Mono";
   font-size: 0.85rem;
   width: 25%;
   height: 11em;

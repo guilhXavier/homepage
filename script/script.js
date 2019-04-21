@@ -14,6 +14,13 @@ function getTime() {
   );
 }
 
+function search(e) {
+  if (e.keyCode == 13) {
+    var val = document.getElementById("searchField").value;
+    window.open("https://google.com/search?q=" + val);
+  }
+}
+
 let phrases = [
   "Good morning, Guilherme!",
   "Have a good day at IF!",
@@ -64,4 +71,15 @@ window.onload = () => {
   setInterval(() => {
     clock.textContent = getTime();
   }, 100);
+
+  document.addEventListener("keydown", event => {
+    if (event.keyCode == 32) {
+      document.getElementById("search").style.display = "flex";
+      document.getElementById("searchField").focus();
+    } else if (event.keyCode == 27) {
+      document.getElementById("searchField").value = "";
+      document.getElementById("searchField").blur();
+      document.getElementById("searchField").style.display = "none";
+    }
+  });
 };
