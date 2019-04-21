@@ -17,7 +17,7 @@ function getTime() {
 function search(e) {
   if (e.keyCode == 13) {
     var val = document.getElementById("searchField").value;
-    window.open("https://google.com/search?q=" + val);
+    window.location.replace("https://google.com/search?q=" + val);
   }
 }
 
@@ -75,11 +75,15 @@ window.onload = () => {
   document.addEventListener("keydown", event => {
     if (event.keyCode == 32) {
       document.getElementById("search").style.display = "flex";
+      if (document.getElementById("searchField").style.display === "none") {
+        document.getElementById("searchField").style.display = "flex";
+      }
       document.getElementById("searchField").focus();
     } else if (event.keyCode == 27) {
       document.getElementById("searchField").value = "";
       document.getElementById("searchField").blur();
       document.getElementById("searchField").style.display = "none";
+      document.getElementById("search").style.display = "none";
     }
   });
 };
