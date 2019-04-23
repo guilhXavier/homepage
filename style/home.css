@@ -45,6 +45,22 @@ body {
   margin-top: -10vh;
   text-align: center;
 }
+@media only screen and (max-width: 960px) {
+  body {
+    height: auto;
+  }
+  .clock {
+    margin-top: 1em;
+  }
+  body > .bookmarkContainer {
+    flex-direction: column;
+    width: 60%;
+  }
+  .bookmarkContainer > .bookmarkSection {
+    width: auto;
+    margin: 1em 0em;
+  }
+}
 h1 {
   color: beige;
   font-family: "Roboto Mono";
