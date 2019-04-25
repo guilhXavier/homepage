@@ -31,7 +31,7 @@ let phrases = [
   "Any French homework?",
   "Do it for her",
   "Which book do you want to finish?",
-  "Proletaires de tous les pays, unissez-vous!",
+  "She likes you for who you are",
   "Which language is next?",
   "Winter is coming.",
   "Late game é agora.",
@@ -47,7 +47,7 @@ async function openWeatherCall(url) {
 }
 
 document.querySelector("h1").addEventListener("click", () => {
-  let r = Math.floor(Math.random() * 13) + 0;
+  let r = Math.floor(Math.random() * phrases.length) + 0;
   document.querySelector("h1").innerHTML = phrases[r];
 });
 
