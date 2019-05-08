@@ -1,117 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="My Personal Homepage" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Homepage</title>
-    <link rel="stylesheet" href="./style/home.css" type="text/css" />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="https://guilhxavier.github.io/homepage/favicon.ico"
-    />
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#5e0199" />
-    <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker
-          .register("/sw.js")
-          .then(() => {
-            console.log("sw registered");
-          })
-          .catch(() => {
-            console.warn("sw failed");
-          });
-      }
-    </script>
-  </head>
-  <body>
-    <div id="search">
-      <input
-        id="searchField"
-        type="text"
-        name="searchField"
-        onkeypress="return search(event)"
-      />
-    </div>
-    <section class="grid1">
-      <div class="welcomeContainer" id="welcome">
-        <h1>
-          <span id="phrase"></span>
-        </h1>
-      </div>
-      <div class="clockContainer">
-        <h1 class="clock"><span id="clockSpan"></span></h1>
-      </div>
-      <div class="weatherContainer">
-        <p id="temperature">
-          <span id="temp">Fetching</span><span id="desc">...</span>
-        </p>
-      </div>
-    </section>
-    <div class="bookmarkContainer">
-      <div class="bookmarkSection">
-        <div class="bookmarkTitle">Daily</div>
-        <div class="bookmarkInner">
-          <a class="bookmark" href="https://web.whatsapp.com/">Web Zap</a>
-          <a
-            class="bookmark"
-            href="https://news.google.com/?hl=pt-BR&gl=BR&ceid=BR:pt-419"
-            >Google News</a
-          >
-          <a class="bookmark" href="https://mail.google.com/mail/u/0/#inbox"
-            >Inbox</a
-          >
-          <a class="bookmark" href="http://qacademico.ifsul.edu.br/"
-            >Q-Acadêmico</a
-          >
-          <a class="bookmark" href="https://moodle.ifsul.edu.br/sapucaia/"
-            >Moodle IFSUL</a
-          >
-          <a class="bookmark" href="https://github.com/guilhXavier">GitHub</a>
-          <a class="bookmark" href="https://www.udemy.com/">Udemy</a>
-          <a class="bookmark" href="https://medium.com/">Medium</a>
-        </div>
-      </div>
-      <div class="bookmarkSection">
-        <div class="bookmarkTitle">Music</div>
-        <div class="bookmarkInner">
-          <a
-            class="bookmark"
-            href="https://open.spotify.com/playlist/4BZUUsq1MmxolJeN9u9vh0"
-            >Spotify</a
-          >
-          <a
-            class="bookmark"
-            href="https://soundcloud.com/guilherme-tamara/sets/198-x-fm-no-soundcloud"
-            >Soundcloud</a
-          >
-        </div>
-      </div>
-      <div class="bookmarkSection">
-        <div class="bookmarkTitle">Media</div>
-        <div class="bookmarkInner">
-          <a class="bookmark" href="https://www.youtube.com/">Youtube</a>
-          <a class="bookmark" href="https://www.netflix.com/">Netflix</a>
-          <a class="bookmark" href="https://www.twitch.tv/">Twitch</a>
-          <a class="bookmark" href="https://www.hltv.org/">HLTV</a>
-        </div>
-      </div>
-      <div class="bookmarkSection">
-        <div class="bookmarkTitle">Social</div>
-        <div class="bookmarkInner">
-          <a class="bookmark" href="https://discordapp.com/channels/@me"
-            >Discord</a
-          >
-          <a class="bookmark" href="https://www.facebook.com/">Facebook</a>
-          <a class="bookmark" href="https://twitter.com/home">Twitter</a>
-          <a class="bookmark" href="https://www.reddit.com/">Reddit</a>
-          <a class="bookmark" href="https://www.linkedin.com/feed/">Linkedin</a>
-        </div>
-      </div>
-    </div>
-    <script src="./script/script.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="My Personal Homepage" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Homepage</title>
+		<link rel="stylesheet" href="./style/home.css" type="text/css" />
+		<link
+			rel="shortcut icon"
+			type="image/png"
+			href="https://guilhxavier.github.io/homepage/favicon.ico"
+		/>
+		<link rel="manifest" href="/manifest.json" />
+		<meta name="theme-color" content="#5e0199" />
+		<script>
+			if ('serviceWorker' in navigator) {
+				navigator.serviceWorker
+					.register('/sw.js')
+					.then(() => {
+						console.log('sw registered');
+					})
+					.catch(() => {
+						console.warn('sw failed');
+					});
+			}
+		</script>
+	</head>
+	<body>
+		<div id="search">
+			<input
+				id="searchField"
+				type="text"
+				name="searchField"
+				onkeypress="return search(event)"
+			/>
+		</div>
+		<section class="grid1">
+			<div class="welcomeContainer" id="welcome">
+				<h1>
+					<span id="phrase"></span>
+				</h1>
+			</div>
+			<div class="clockContainer">
+				<h1 class="clock"><span id="clockSpan"></span></h1>
+			</div>
+			<div class="weatherContainer">
+				<p id="temperature">
+					<span id="temp">Fetching</span><span id="desc">...</span>
+				</p>
+			</div>
+		</section>
+		<div class="bookmarkContainer">
+			<div class="bookmarkSection">
+				<div class="bookmarkTitle">Daily</div>
+				<div class="bookmarkInner">
+					<a class="bookmark" href="https://web.whatsapp.com/">Web Zap</a>
+					<a class="bookmark" href="http://qacademico.ifsul.edu.br/"
+						>Q-Acadêmico</a
+					>
+					<a class="bookmark" href="https://moodle.ifsul.edu.br/sapucaia/"
+						>Moodle IFSUL</a
+					>
+					<a class="bookmark" href="https://github.com/guilhXavier">GitHub</a>
+					<a class="bookmark" href="https://www.udemy.com/">Udemy</a>
+					<a class="bookmark" href="https://medium.com/">Medium</a>
+				</div>
+			</div>
+			<div class="bookmarkSection">
+				<div class="bookmarkTitle">Google Stuff</div>
+				<div class="bookmarkInner">
+					<a class="bookmark" href="https://mail.google.com/mail/u/0/#inbox"
+						>Mail</a
+					>
+					<a
+						class="bookmark"
+						href="https://news.google.com/?hl=pt-BR&gl=BR&ceid=BR:pt-419"
+						>Google News</a
+					>
+					<a class="bookmark" href="https://drive.google.com/drive/my-drive"
+						>Drive</a
+					>
+					<a class="bookmark" href="https://docs.google.com/document/u/0/"
+						>Docs</a
+					>
+					<a class="bookmark" href="https://docs.google.com/presentation/u/0/"
+						>Slides</a
+					>
+					<a class="bookmark" href="https://docs.google.com/spreadsheets/u/0/"
+						>Sheets</a
+					>
+					<a
+						class="bookmark"
+						href="https://translate.google.com.br/?hl=en&tab=oT"
+						>Translate</a
+					>
+					<a
+						class="bookmark"
+						href="https://sites.google.com/u/0/new/?authuser=0"
+						>Sites</a
+					>
+				</div>
+			</div>
+			<div class="bookmarkSection">
+				<div class="bookmarkTitle">Media</div>
+				<div class="bookmarkInner">
+					<a class="bookmark" href="https://www.youtube.com/">Youtube</a>
+					<a class="bookmark" href="https://www.netflix.com/">Netflix</a>
+					<a class="bookmark" href="https://www.twitch.tv/">Twitch</a>
+					<a class="bookmark" href="https://www.hltv.org/">HLTV</a>
+				</div>
+			</div>
+			<div class="bookmarkSection">
+				<div class="bookmarkTitle">Social</div>
+				<div class="bookmarkInner">
+					<a class="bookmark" href="https://discordapp.com/channels/@me"
+						>Discord</a
+					>
+					<a class="bookmark" href="https://www.facebook.com/">Facebook</a>
+					<a class="bookmark" href="https://twitter.com/home">Twitter</a>
+					<a class="bookmark" href="https://www.reddit.com/">Reddit</a>
+					<a class="bookmark" href="https://www.linkedin.com/feed/">Linkedin</a>
+				</div>
+			</div>
+		</div>
+		<script src="./script/script.js"></script>
+	</body>
 </html>
